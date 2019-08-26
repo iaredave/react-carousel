@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { Thumb } from './styles'
+import { Thumb, Heading } from './styles'
 
 class ThumbNail extends Component {
   constructor () {
@@ -26,18 +26,13 @@ class ThumbNail extends Component {
 
   render () {
     return (
-        <React.Fragment>
-                <div>
-                       { this.state.numberOfCars < 4 &&
-                      <Link to={'/detailpage/' + this.props.id}>
-                        {this.props.title}
-                      </Link>
-                      }
-                      <div onClick={this.toggleRightArrow}>
-                                  lul
-                      </div>
-                  </div>
-        </React.Fragment>
+    <React.Fragment>
+               { this.state.numberOfCars < 4 &&
+                <Thumb>
+
+                </Thumb>
+              }
+     </React.Fragment>
     )
   }
 }

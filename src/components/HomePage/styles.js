@@ -10,6 +10,11 @@ export const Body = styled.div`
     background-color: #DDDDDD;
 `;
 
+export const ThumbnailContainer = styled.div`
+    display: flex;
+    justify-content: space-around;
+`;
+
 export const Footer = styled.div`
     height: 5vh;
     background: #232526;  /* fallback for old browsers */

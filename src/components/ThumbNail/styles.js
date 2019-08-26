@@ -6,16 +6,12 @@ export const Heading = styled.div`
   justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
-  padding: 50px;
   outline: 1px solid blue;
 `;
 
 export const Thumb = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
-  padding: 50px;
+  display: inline-block;
+  margin: 5vw;
+  padding: 15vh;
   outline: 1px solid blue;
 `;
