@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Route } from 'react-router-dom'
+import ThumbNail from './components/ThumbNail/index'
+import Detail from './components/DetailPage/index'
+import cars from './carAPI'
+import { Header, Body, Footer } from './components/HomePage/styles'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+    <React.Fragment>
+        <Header>
 
-export default App;
+        </Header>
+        <Body>
+        <Route exact path='/' render={() => (
+            <div>
+                {cars.map((cars, index) => (
+                    <ThumbNail
+                        id={index}
+                        key={cars.title}
+                        title={cars.title}
+                        info={cars.info}
+                    />
+                ))}
+            </div>
+        )}
+        />
+        <Route path='/detailpage/:id' render={({ match }) => (
+            <Detail
+                key={match.params.id}
+                id={match.params.id}
+                title={cars[match.params.id].title}
+                info={cars[match.params.id].info}
+            />
+        )} />
+        </Body>
+        <Footer>
+
+        </Footer>
+    </React.Fragment>
+)
+
+export default App
