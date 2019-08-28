@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
 export const Header = styled.div`
-    height: 30vh;
+    height: 20vh;
     background-color: #DDDDDD;
 `;
 
 export const Body = styled.div`
-    height: 65vh;
+    height: 75vh;
     background-color: #DDDDDD;
 `;
 

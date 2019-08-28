@@ -13,8 +13,8 @@ export const Thumbv = styled.div`
   display: inline-block;
   position: relative;
   margin: 5vw;
-  height: 25vh;
-  width: 15vw;
+  height: 300px;
+  width: 200px;
   overflow: hidden;
   outline: 1px solid blue;
 `;
@@ -24,11 +24,9 @@ export const Thumb = styled.div`
   margin: 5vw;
   position: relative;
   height: 30vh;
-  padding: 15px;
-  background-color: black;
   width: 20vw;
   overflow: hidden;
   outline: 2px solid blue;
+  padding: 15px;
+  background-color: black;
 `;
-
-
