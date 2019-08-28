@@ -29,35 +29,46 @@ class Slider extends Component {
   }
 
     toggleLeftArrow = () => {
-    console.log(this.state.leftCounter)
         if (this.state.totalNegCars - 1 < this.state.leftCounter) {
                 this.setState({ defaultView: false,
-                 newArray: this.state.carArray.slice(this.state.leftCounter).concat(this.state.carArray.slice(0, this.state.leftCounter)),
-                           leftCounter: this.state.leftCounter - 1,
-                           rightCounter: this.state.leftCounter + 1,
+                leftCounter: this.state.leftCounter - 1,
+                 rightCounter: this.state.rightCounter - 1,
+                 newArray: this.state.carArray.slice(this.state.leftCounter).concat(this.state.carArray.slice(0, this.state.leftCounter))
                   })
-                  console.log('tick')
                   }
-                  if (this.state.leftCounter === this.state.totalNegCars) {
-                    this.setState({ leftCounter: - 1 })
+                  if (this.state.leftCounter <= this.state.totalNegCars) {
+                    this.setState({ leftCounter: - 1,
+                     newArray: this.state.carArray.slice(this.state.leftCounter).concat(this.state.carArray.slice(0, this.state.leftCounter))
+                     })
                   }
+                  if (this.state.rightCounter < this.state.totalNegCars + 3) {
+                                      this.setState({ rightCounter: 1 })
+                                    }
+
 }
 
     toggleRightArrow = () => {
     if (this.state.totalCars + 1 > this.state.rightCounter) {
         this.setState({ defaultView: false,
-         newArray: this.state.carArray.slice(this.state.rightCounter).concat(this.state.carArray.slice(0, this.state.rightCounter)),
-          rightCounter: this.state.rightCounter + 1,
-          leftCounter: this.state.leftCounter + 1
+        rightCounter: this.state.rightCounter + 1,
+        leftCounter: this.state.leftCounter + 1,
+         newArray: this.state.carArray.slice(this.state.rightCounter).concat(this.state.carArray.slice(0, this.state.rightCounter))
           })
-          console.log('tick')
           }
-          if (this.state.rightCounter === this.state.totalCars) {
-            this.setState({ rightCounter: 1 })
+          if (this.state.rightCounter >= this.state.totalCars) {
+            this.setState({ rightCounter: 1,
+             newArray: this.state.carArray.slice(this.state.rightCounter).concat(this.state.carArray.slice(0, this.state.rightCounter))
+             })
           }
+          if (this.state.leftCounter > this.state.totalCars - 3) {
+                      this.setState({ leftCounter: -1 })
+                    }
+
 }
 
   render () {
+  console.log('right counter' + this.state.rightCounter)
+            console.log('left counter' + this.state.leftCounter)
   const newPictures = this.state.newArray.map((cars, index) => (
                         <ThumbNail
                               id={index}
