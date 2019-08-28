@@ -13,7 +13,7 @@ const carAPI = [
             'cillum dolore eu fugiat nulla pariatur. Excepteur sint' +
             ' occaecat cupidatat non proident, sunt in culpa qui ' +
             'officia deserunt mollit anim id est laborum."',
-        url: './images/2019-corvette-stingray-coupe-2lt-g8g-colorizer.webp'
+        url: './images/USC90CHC063A021001.jpg'
     },
     {
         id: 1,
@@ -41,7 +41,7 @@ const carAPI = [
             'cillum dolore eu fugiat nulla pariatur. Excepteur sint' +
             ' occaecat cupidatat non proident, sunt in culpa qui ' +
             'officia deserunt mollit anim id est laborum."',
-        url: './images/81sh0rLgWvL.jpg'
+        url: './images/Webp.net-resizeimage.jpg'
     },
     {
         id: 3,
@@ -55,7 +55,7 @@ const carAPI = [
             'cillum dolore eu fugiat nulla pariatur. Excepteur sint' +
             ' occaecat cupidatat non proident, sunt in culpa qui ' +
             'officia deserunt mollit anim id est laborum."',
-        url: './images/aventador-s-coupe-configuratore.webp'
+        url: './images/lamborghini-forsennato-concept.jpg'
     },
     {
         id: 4,
@@ -98,6 +98,20 @@ const carAPI = [
             ' occaecat cupidatat non proident, sunt in culpa qui ' +
             'officia deserunt mollit anim id est laborum."',
         url: './images/bd18bl-bernese-mountain-dog-adult-standing.png'
+    },
+    {
+        id: 7,
+        title: 'Elise',
+        info: '"Lorem ipsum dolor sit amet, consectetur' +
+            ' adipiscing elit, sed do eiusmod tempor incididunt' +
+            ' ut labore et dolore magna aliqua. Ut enim ad minim' +
+            ' veniam, quis nostrud exercitation ullamco laboris ' +
+            'nisi ut aliquip ex ea commodo consequat. Duis aute ' +
+            'irure dolor in reprehenderit in voluptate velit esse ' +
+            'cillum dolore eu fugiat nulla pariatur. Excepteur sint' +
+            ' occaecat cupidatat non proident, sunt in culpa qui ' +
+            'officia deserunt mollit anim id est laborum."',
+        url: './images/lotus_elise.jpg'
     }
 ]
 

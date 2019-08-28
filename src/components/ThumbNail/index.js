@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Thumb } from './styles'
+import { Thumb, Image1, Thumb1 } from './styles'
 
 class ThumbNail extends Component {
 
@@ -8,7 +8,7 @@ class ThumbNail extends Component {
         <React.Fragment>
        { this.props.id < 3 &&
         <Thumb>
-             <img alt="" style={{ maxWidth: '100%', height: '100%' }}src={this.props.url}/>
+             <img alt="" style={{ height: '100%', maxWidth: '100%' }}src={this.props.url}/>
          </Thumb>
         }
          </React.Fragment>

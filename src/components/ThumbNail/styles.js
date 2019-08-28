@@ -9,11 +9,26 @@ export const Heading = styled.div`
   outline: 1px solid blue;
 `;
 
-export const Thumb = styled.div`
+export const Thumbv = styled.div`
   display: inline-block;
+  position: relative;
   margin: 5vw;
   height: 25vh;
   width: 15vw;
   overflow: hidden;
   outline: 1px solid blue;
 `;
+
+export const Thumb = styled.div`
+  display: inline-block;
+  margin: 5vw;
+  position: relative;
+  height: 30vh;
+  padding: 15px;
+  background-color: black;
+  width: 20vw;
+  overflow: hidden;
+  outline: 2px solid blue;
+`;
+
+
