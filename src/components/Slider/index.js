@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import ThumbNail from '../ThumbNail/index'
 import carAPI from '../../carAPI'
-// import update from 'immutability-helper'
-// const arrayMove = require('array-move')
+import { RightArrow, LeftArrow } from './styles'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronCircleRight, faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons'
 
 class Slider extends Component {
   constructor () {
@@ -80,9 +81,9 @@ class Slider extends Component {
 
     return (
     <React.Fragment>
-       <div onClick={this.toggleLeftArrow}>
-            Left
-       </div>
+       <LeftArrow onClick={this.toggleLeftArrow}>
+            <FontAwesomeIcon style={{ fontSize: '80px' }} icon={faChevronCircleLeft} />
+       </LeftArrow>
             { this.state.defaultView === true ? (
             <div>
                 {this.state.pictures}
@@ -92,9 +93,9 @@ class Slider extends Component {
                {newPictures}
              </div>
              )}
-        <div onClick={this.toggleRightArrow}>
-            Right
-        </div>
+        <RightArrow onClick={this.toggleRightArrow}>
+            <FontAwesomeIcon style={{ fontSize: '80px' }} icon={faChevronCircleRight} />
+        </RightArrow>
      </React.Fragment>
     )
   }

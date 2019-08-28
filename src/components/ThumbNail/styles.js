@@ -9,16 +9,6 @@ export const Heading = styled.div`
   outline: 1px solid blue;
 `;
 
-export const Thumbv = styled.div`
-  display: inline-block;
-  position: relative;
-  margin: 5vw;
-  height: 300px;
-  width: 200px;
-  overflow: hidden;
-  outline: 1px solid blue;
-`;
-
 export const Thumb = styled.div`
   display: inline-block;
   margin: 5vw;
@@ -28,4 +18,8 @@ export const Thumb = styled.div`
   padding: 5px;
   background-color: #AAAAAA;
   box-shadow: 20px 20px 10px grey; 
+`;
+
+export const RightArrow = styled.div`
+   outline: '2px solid blue';
 `;
