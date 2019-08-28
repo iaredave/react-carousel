@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ThumbNail from '../ThumbNail/index'
-import lul from '../../carAPI'
+import carAPI from '../../carAPI'
 // import update from 'immutability-helper'
 // const arrayMove = require('array-move')
 
@@ -9,11 +9,12 @@ class Slider extends Component {
     super()
 
     this.state = {
-        carArray: lul,
+        carArray: carAPI,
         newArray: [0, 1],
-        totalCars: lul.length,
-        true: true,
-        pictures: lul.map((cars, index) => (
+        totalCars: carAPI.length,
+        totalNegCars: -(carAPI.length),
+        defaultView: true,
+        pictures: carAPI.map((cars, index) => (
                       <ThumbNail
                             id={index}
                             key={cars.title}
@@ -28,23 +29,36 @@ class Slider extends Component {
   }
 
     toggleLeftArrow = () => {
-        this.setState({ true: false,
-         newArray: this.state.carArray.slice(this.state.leftCounter).concat(this.state.carArray.slice(0, this.state.leftCounter)),
-          leftCounter: this.state.leftCounter - 1,
-          rightCounter: this.state.leftCounter + 1,
-          })
+    console.log(this.state.leftCounter)
+        if (this.state.totalNegCars - 1 < this.state.leftCounter) {
+                this.setState({ defaultView: false,
+                 newArray: this.state.carArray.slice(this.state.leftCounter).concat(this.state.carArray.slice(0, this.state.leftCounter)),
+                           leftCounter: this.state.leftCounter - 1,
+                           rightCounter: this.state.leftCounter + 1,
+                  })
+                  console.log('tick')
+                  }
+                  if (this.state.leftCounter === this.state.totalNegCars) {
+                    this.setState({ leftCounter: - 1 })
+                  }
 }
 
     toggleRightArrow = () => {
-        this.setState({ true: false,
+    if (this.state.totalCars + 1 > this.state.rightCounter) {
+        this.setState({ defaultView: false,
          newArray: this.state.carArray.slice(this.state.rightCounter).concat(this.state.carArray.slice(0, this.state.rightCounter)),
           rightCounter: this.state.rightCounter + 1,
           leftCounter: this.state.leftCounter + 1
           })
+          console.log('tick')
+          }
+          if (this.state.rightCounter === this.state.totalCars) {
+            this.setState({ rightCounter: 1 })
+          }
 }
 
   render () {
-  const pic = this.state.newArray.map((cars, index) => (
+  const newPictures = this.state.newArray.map((cars, index) => (
                         <ThumbNail
                               id={index}
                               key={cars.title}
@@ -59,13 +73,13 @@ class Slider extends Component {
        <div onClick={this.toggleLeftArrow}>
             Left
        </div>
-            { this.state.true === true ? (
+            { this.state.defaultView === true ? (
             <div>
                 {this.state.pictures}
             </div>
             ) : (
             <div>
-               {pic}
+               {newPictures}
              </div>
              )}
         <div onClick={this.toggleRightArrow}>

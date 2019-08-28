@@ -1,6 +1,6 @@
 
 
-const cars = [
+const carAPI = [
     {
         id: 0,
         title: 'Corvette',
@@ -101,4 +101,4 @@ const cars = [
     }
 ]
 
-export default cars
+export default carAPI
