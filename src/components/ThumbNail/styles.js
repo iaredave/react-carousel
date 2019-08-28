@@ -22,11 +22,10 @@ export const Thumbv = styled.div`
 export const Thumb = styled.div`
   display: inline-block;
   margin: 5vw;
-  position: relative;
-  height: 30vh;
-  width: 20vw;
+  height: 350px;
+  width: 350px;
   overflow: hidden;
-  outline: 2px solid blue;
-  padding: 15px;
-  background-color: black;
+  padding: 5px;
+  background-color: #AAAAAA;
+  box-shadow: 20px 20px 10px grey; 
 `;
