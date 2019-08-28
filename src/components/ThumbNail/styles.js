@@ -12,6 +12,8 @@ export const Heading = styled.div`
 export const Thumb = styled.div`
   display: inline-block;
   margin: 5vw;
-  padding: 15vh;
+  height: 25vh;
+  width: 15vw;
+  overflow: hidden;
   outline: 1px solid blue;
 `;

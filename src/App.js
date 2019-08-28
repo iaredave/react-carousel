@@ -2,6 +2,7 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 import ThumbNail from './components/ThumbNail/index'
 import Detail from './components/DetailPage/index'
+import Slider from './components/Slider/index'
 import cars from './carAPI'
 import { Header, Body, Footer, ThumbnailContainer } from './components/HomePage/styles'
 
@@ -12,19 +13,7 @@ const App = () => (
         </Header>
         <Body>
             <ThumbnailContainer>
-                <Route exact path='/' render={() => (
-                    <div>
-                        {cars.map((cars, index) => (
-                            <ThumbNail
-                                id={index}
-                                key={cars.title}
-                                title={cars.title}
-                                info={cars.info}
-                            />
-                        ))}
-                    </div>
-                )}
-                />
+                <Route exact path='/' component={Slider}/>
             </ThumbnailContainer>
             <Route path='/detailpage/:id' render={({ match }) => (
                 <Detail

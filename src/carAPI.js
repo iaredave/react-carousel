@@ -13,6 +13,7 @@ const cars = [
             'cillum dolore eu fugiat nulla pariatur. Excepteur sint' +
             ' occaecat cupidatat non proident, sunt in culpa qui ' +
             'officia deserunt mollit anim id est laborum."',
+        url: './images/2019-corvette-stingray-coupe-2lt-g8g-colorizer.webp'
     },
     {
         id: 1,
@@ -26,6 +27,7 @@ const cars = [
             'cillum dolore eu fugiat nulla pariatur. Excepteur sint' +
             ' occaecat cupidatat non proident, sunt in culpa qui ' +
             'officia deserunt mollit anim id est laborum."',
+        url: './images/316_main_l.jpg'
     },
     {
         id: 2,
@@ -39,6 +41,7 @@ const cars = [
             'cillum dolore eu fugiat nulla pariatur. Excepteur sint' +
             ' occaecat cupidatat non proident, sunt in culpa qui ' +
             'officia deserunt mollit anim id est laborum."',
+        url: './images/81sh0rLgWvL.jpg'
     },
     {
         id: 3,
@@ -52,6 +55,7 @@ const cars = [
             'cillum dolore eu fugiat nulla pariatur. Excepteur sint' +
             ' occaecat cupidatat non proident, sunt in culpa qui ' +
             'officia deserunt mollit anim id est laborum."',
+        url: './images/aventador-s-coupe-configuratore.webp'
     },
     {
         id: 4,
@@ -65,6 +69,7 @@ const cars = [
             'cillum dolore eu fugiat nulla pariatur. Excepteur sint' +
             ' occaecat cupidatat non proident, sunt in culpa qui ' +
             'officia deserunt mollit anim id est laborum."',
+        url: './images/van.jpg'
     },
     {
         id: 5,
@@ -78,6 +83,7 @@ const cars = [
             'cillum dolore eu fugiat nulla pariatur. Excepteur sint' +
             ' occaecat cupidatat non proident, sunt in culpa qui ' +
             'officia deserunt mollit anim id est laborum."',
+        url: './images/71F3C8xHxfL._SL1500_.jpg'
     },
     {
         id: 6,
@@ -91,6 +97,7 @@ const cars = [
             'cillum dolore eu fugiat nulla pariatur. Excepteur sint' +
             ' occaecat cupidatat non proident, sunt in culpa qui ' +
             'officia deserunt mollit anim id est laborum."',
+        url: './images/bd18bl-bernese-mountain-dog-adult-standing.png'
     }
 ]
 
