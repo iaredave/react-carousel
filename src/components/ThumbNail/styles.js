@@ -18,6 +18,13 @@ export const Thumb = styled.div`
   padding: 5px;
   background-color: #AAAAAA;
   box-shadow: 20px 20px 10px grey; 
+  
+  
+  &:hover {
+  -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+  }
 `;
 
 export const RightArrow = styled.div`
