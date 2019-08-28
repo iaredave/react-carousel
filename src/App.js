@@ -1,6 +1,5 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-import ThumbNail from './components/ThumbNail/index'
 import Detail from './components/DetailPage/index'
 import Slider from './components/Slider/index'
 import cars from './carAPI'

@@ -8,7 +8,7 @@ class ThumbNail extends Component {
         <React.Fragment>
        { this.props.id < 3 &&
         <Thumb>
-             <img style={{ maxWidth: '100%', height: '100%' }}src={this.props.url}/>
+             <img alt="" style={{ maxWidth: '100%', height: '100%' }}src={this.props.url}/>
          </Thumb>
         }
          </React.Fragment>

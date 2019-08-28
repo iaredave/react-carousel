@@ -67,8 +67,7 @@ class Slider extends Component {
 }
 
   render () {
-  console.log('right counter' + this.state.rightCounter)
-            console.log('left counter' + this.state.leftCounter)
+
   const newPictures = this.state.newArray.map((cars, index) => (
                         <ThumbNail
                               id={index}
