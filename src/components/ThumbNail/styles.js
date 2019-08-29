@@ -31,9 +31,12 @@ export const Info = styled.div`
     white-space: wrap; 
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: 12px;
+    font-size: 18px;
   }
-  font-size: 16px;
+@media (max-width: 600px) {
+    width: 100%;
+    padding: 20px;
+}
     outline: 2px solid blue;
 `;
 
