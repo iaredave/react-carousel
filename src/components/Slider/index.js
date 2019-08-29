@@ -45,7 +45,7 @@ class Slider extends Component {
         }
 
     toggleRightArrow = () => {
-  /* If right counter is less than total size of car array then increase counters */
+  /* If right counter is less than total length of car array then increase counters */
         if (this.state.totalCars + 1 > this.state.rightCounter) {
                 this.setState({
                     defaultView: false,
@@ -55,14 +55,14 @@ class Slider extends Component {
                     newArray: this.state.carArray.slice(this.state.rightCounter).concat(this.state.carArray.slice(0, this.state.rightCounter))
                 })
          }
-  /* If right counter equals total car array size then drop counter back to 1 to reset */
+  /* If right counter equals total car array length then drop counter back to 1 to reset */
           if (this.state.rightCounter >= this.state.totalCars) {
                 this.setState({
                     rightCounter: 1,
                     newArray: this.state.carArray.slice(this.state.rightCounter).concat(this.state.carArray.slice(0, this.state.rightCounter))
                 })
           }
-  /* If left counter equals total car array size then drop counter back to -1 to reset */
+  /* If left counter equals total car array length then drop counter back to -1 to reset */
           if (this.state.leftCounter > this.state.totalCars - 3) {
                 this.setState({ leftCounter: -1 })
           }
