@@ -19,6 +19,8 @@ export const Title = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 28px;
+    font-family: 'Helvetica', bold;
 `;
 
 export const Info = styled.div`
@@ -34,6 +36,7 @@ export const Info = styled.div`
     width: 100%;
     padding: 0 40px 0 40px;
 }
+	font-family: 'Garamond', bold;
 `;
 
 export const Details = styled.div`
