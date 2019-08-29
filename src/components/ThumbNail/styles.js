@@ -9,7 +9,6 @@ export const Thumb = styled.div`
   padding: 5px;
   background-color: #AAAAAA;
   box-shadow: 10px 10px 10px grey; 
-  outline: 2px solid blue;
   &:hover {
   -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
@@ -22,7 +21,6 @@ export const Title = styled.div`
     align-items: center;
     justify-content: center;
     
-    outline: 2px solid blue;
 `;
 
 export const Info = styled.div`
@@ -37,7 +35,7 @@ export const Info = styled.div`
     width: 100%;
     padding: 20px;
 }
-    outline: 2px solid blue;
+    
 `;
 
 export const Details = styled.div`
