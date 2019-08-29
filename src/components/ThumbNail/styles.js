@@ -8,14 +8,14 @@ export const Thumb = styled.div`
   overflow: hidden;
   padding: 5px;
   background-color: #AAAAAA;
+  
   box-shadow: 10px 10px 10px grey; 
+  
   margin-bottom: 0px;
   &:hover {
   background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
   }
 `;
-
-
 
 export const Title = styled.div`
     display: flex;
