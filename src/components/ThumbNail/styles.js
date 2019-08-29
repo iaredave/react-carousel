@@ -6,11 +6,9 @@ export const Thumb = styled.div`
   height: 350px;
   width: 350px;
   overflow: hidden;
-  padding: 5px;
+  padding: 2px;
   background-color: #AAAAAA;
-  
   box-shadow: 10px 10px 10px grey; 
-  
   margin-bottom: 0px;
   &:hover {
   background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
@@ -40,4 +38,5 @@ export const Info = styled.div`
 
 export const Details = styled.div`
      display: inline-block;
+     margin-bottom: 50px;
 `;

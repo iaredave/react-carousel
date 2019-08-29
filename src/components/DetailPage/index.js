@@ -1,6 +1,32 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const Detail = ({ title, info }) => (
-  <li>{title} as {info}</li>
-)
+class Detail extends Component {
+      constructor () {
+        super()
+
+        this.state = {
+            detailtitle: '',
+            detailinfo: ''
+        }
+      }
+
+componentDidMount () {
+    const { title } = this.props.location.state
+    const { info } = this.props.location.state
+    this.setState({ detailtitle: title,
+                    detailinfo: info
+     })
+
+}
+      render () {
+
+        return (
+            <div>
+                {this.state.detailtitle}
+                {this.state.detailinfo}
+            </div>
+        )
+      }
+}
+
 export default Detail

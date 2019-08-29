@@ -10,7 +10,12 @@ class ThumbNail extends Component {
        { this.props.id < 3 &&
        <Details>
         <Thumb>
-        <Link to={'/detailpage' + this.props.title}>
+        <Link to={{ pathname: '/detailpage/' + this.props.title,
+                state: {
+                    title: this.props.title,
+                    info: this.props.info
+                }
+            }}>
              <img alt="" style={{ height: '100%', maxWidth: '100%' }}src={this.props.url}/>
          </Link>
          </Thumb>

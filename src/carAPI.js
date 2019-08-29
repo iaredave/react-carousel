@@ -113,6 +113,6 @@ const carAPI = [
             'officia deserunt mollit anim id est laborum."',
         url: './images/elise.jpg'
     }
-]
+];
 
 export default carAPI
