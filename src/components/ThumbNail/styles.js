@@ -9,13 +9,13 @@ export const Thumb = styled.div`
   padding: 5px;
   background-color: #AAAAAA;
   box-shadow: 10px 10px 10px grey; 
-  margin-bottom: -5px;
+  margin-bottom: 0px;
   &:hover {
-  -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        transform: scale(1.2);
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
   }
 `;
+
+
 
 export const Title = styled.div`
     display: flex;
