@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Thumb, Image1, Thumb1 } from './styles'
+import { Thumb, Title, Info, Details } from './styles'
+import { Link } from 'react-router-dom'
 
 class ThumbNail extends Component {
 
@@ -7,9 +8,15 @@ class ThumbNail extends Component {
         return (
         <React.Fragment>
        { this.props.id < 3 &&
+       <Details>
         <Thumb>
+        <Link to={'/detailpage' + this.props.id}>
              <img alt="" style={{ height: '100%', maxWidth: '100%' }}src={this.props.url}/>
+         </Link>
          </Thumb>
+         <Title>{this.props.title}</Title>
+         <Info>{this.props.info}</Info>
+         </Details>
         }
          </React.Fragment>
         )
