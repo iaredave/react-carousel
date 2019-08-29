@@ -14,7 +14,7 @@ const App = () => (
             <ThumbnailContainer>
                 <Route exact path='/' component={Slider}/>
             </ThumbnailContainer>
-            <Route path='/detailpage/:id' render={({ match }) => (
+            <Route path='/detailpage/:title' render={({ match }) => (
                 <Detail
                     key={match.params.id}
                     id={match.params.id}

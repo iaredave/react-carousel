@@ -18,17 +18,25 @@ export const Thumb = styled.div`
 `;
 
 export const Title = styled.div`
-    display: inline-block;
-    max-width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
     outline: 2px solid blue;
 `;
 
 export const Info = styled.div`
-    display: inline-block;
-    max-width: 5%;
+@media (min-width: 1100px) {
+    width: 500px;
+    white-space: wrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+  }
+  font-size: 16px;
     outline: 2px solid blue;
 `;
 
 export const Details = styled.div`
-     display: inline;
+     display: inline-block;
 `;
