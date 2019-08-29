@@ -14,7 +14,6 @@ class Slider extends Component {
         newArray: [0, 1],
         totalCars: carAPI.length,
         totalNegCars: -(carAPI.length),
-        defaultView: true,
         pictures: carAPI.map((cars, index) => (
                       <ThumbNail
                             id={index}
@@ -25,7 +24,9 @@ class Slider extends Component {
                         />
                     )),
         rightCounter: 1,
-        leftCounter: -1
+        leftCounter: -1,
+        flipSlider: false,
+        defaultView: true
     }
   }
 
@@ -45,7 +46,6 @@ class Slider extends Component {
                   if (this.state.rightCounter < this.state.totalNegCars + 3) {
                                       this.setState({ rightCounter: 1 })
                                     }
-
 }
 
     toggleRightArrow = () => {
@@ -64,11 +64,21 @@ class Slider extends Component {
           if (this.state.leftCounter > this.state.totalCars - 3) {
                       this.setState({ leftCounter: -1 })
                     }
+}
 
+componentDidMount() {
+    window.addEventListener("resize", this.resize.bind(this));
+    this.resize();
+}
+
+resize() {
+    let currentflipSlider = (window.innerWidth <= 760);
+    if (currentflipSlider !== this.state.flipSlider) {
+        this.setState({flipSlider: currentflipSlider});
+    }
 }
 
   render () {
-
   const newPictures = this.state.newArray.map((cars, index) => (
                         <ThumbNail
                               id={index}
@@ -82,7 +92,7 @@ class Slider extends Component {
     return (
     <React.Fragment>
        <LeftArrow onClick={this.toggleLeftArrow}>
-            <FontAwesomeIcon style={{ fontSize: '80px' }} icon={faChevronCircleLeft} />
+            <FontAwesomeIcon style={{ fontSize: '80px' }} rotation={this.state.flipSlider ? 90 : 0} icon={faChevronCircleLeft} />
        </LeftArrow>
             { this.state.defaultView === true ? (
             <div>
@@ -94,7 +104,7 @@ class Slider extends Component {
              </div>
              )}
         <RightArrow onClick={this.toggleRightArrow}>
-            <FontAwesomeIcon style={{ fontSize: '80px' }} icon={faChevronCircleRight} />
+            <FontAwesomeIcon style={{ fontSize: '80px' }} rotation={this.state.flipSlider ? 90 : 0} icon={faChevronCircleRight} />
         </RightArrow>
      </React.Fragment>
     )
