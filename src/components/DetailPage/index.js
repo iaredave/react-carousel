@@ -31,7 +31,7 @@ componentDidMount () {
             <div>
                 {this.state.detailtitle}
                 {this.state.detailinfo}
-                <img alt="" style={{ height: '100%', maxWidth: '100%' }} src={'.' + this.state.detailurl}/>
+                <img alt="" style={{ height: '100%', maxWidth: '100%' }} src={this.state.detailurl}/>
             </div>
             }
             </React.Fragment>
