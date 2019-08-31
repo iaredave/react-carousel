@@ -29,3 +29,4 @@ export const Footer = styled.div`
   height: 20vh;
   background: #ffffff;
 `
+export const DetailContainer = styled.div``

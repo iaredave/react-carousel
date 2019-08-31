@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { BigThumb, BigThumbContainer, MiniThumb, Title, Info } from './styles'
 
 class Detail extends Component {
       constructor () {
@@ -24,15 +25,27 @@ componentDidMount () {
 }
 
       render () {
-    console.log(this.state.detailurl)
         return (
         <React.Fragment>
         { this.state.render === true &&
-            <div>
-                {this.state.detailtitle}
-                {this.state.detailinfo}
-                <img alt="" style={{ height: '100%', maxWidth: '100%' }} src={this.state.detailurl}/>
-            </div>
+            <BigThumbContainer>
+                <BigThumb>
+                 <img alt="" style={{ height: '100%', width: '100%' }} src={this.state.detailurl}/>
+                </BigThumb>
+                <MiniThumb>
+                 <img alt="" style={{ height: '100%', width: '100%', marginRight: '10px' }} src={this.state.detailurl}/>
+                 <img alt="" style={{ height: '100%', width: '100%', marginRight: '10px' }} src={this.state.detailurl}/>
+                 <img alt="" style={{ height: '100%', width: '100%', marginRight: '10px' }} src={this.state.detailurl}/>
+                 <img alt="" style={{ height: '100%', width: '100%', marginRight: '10px' }} src={this.state.detailurl}/>
+                 <img alt="" style={{ height: '100%', width: '100%', marginRight: '10px' }} src={this.state.detailurl}/>
+                </MiniThumb>
+                <Title>
+                 {this.state.detailtitle}
+                </Title>
+                <Info>
+                 {this.state.detailinfo}
+                </Info>
+            </BigThumbContainer>
             }
             </React.Fragment>
         )
