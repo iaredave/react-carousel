@@ -3,6 +3,9 @@ import styled from 'styled-components'
 export const Header = styled.div`
   height: 20vh;
   background: #ffffff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 `
 
 export const Body = styled.div`

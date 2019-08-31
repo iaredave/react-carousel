@@ -10,8 +10,8 @@ export const BigThumb = styled.div`
   background-color: #aaaaaa;
   box-shadow: 10px 10px 10px grey;
   margin-bottom: 0px;
-  &:hover {
-    background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+  @media (max-width: 600px) {
+    width: 100%;
   }
 `
 
@@ -26,6 +26,10 @@ export const MiniThumb = styled.div`
   width: 150px;
   padding: 20px;
   @media (max-width: 600px) {
+    width: 200px;
+    height: '100%';
+    margin-left: 25%;
+    display: inline-block;
   }
 `
 

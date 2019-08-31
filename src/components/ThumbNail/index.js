@@ -14,7 +14,8 @@ class ThumbNail extends Component {
                 state: {
                     title: this.props.title,
                     info: this.props.info,
-                    url: this.props.url
+                    url: this.props.url,
+                    id: this.props.id
                 }
             }}>
              <img alt="" style={{ height: '100%', maxWidth: '100%' }} src={this.props.url}/>

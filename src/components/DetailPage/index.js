@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import carAPI from '../../carAPI'
 import { BigThumb, BigThumbContainer, MiniThumb, Title, Info } from './styles'
 
 class Detail extends Component {
@@ -9,7 +10,7 @@ class Detail extends Component {
             detailtitle: '',
             detailinfo: '',
             detailurl: '',
-            render: false
+            detailid: ''
         }
       }
 
@@ -17,27 +18,27 @@ componentDidMount () {
     const { title } = this.props.location.state
     const { info } = this.props.location.state
     const { url } = this.props.location.state
+    const { id } = this.props.location.state
     this.setState({ detailtitle: title,
                     detailinfo: info,
                     detailurl: url,
-                    render: true
+                    detailid: id
      })
 }
 
       render () {
         return (
         <React.Fragment>
-        { this.state.render === true &&
             <BigThumbContainer>
                 <BigThumb>
                  <img alt="" style={{ height: '100%', width: '100%' }} src={this.state.detailurl}/>
                 </BigThumb>
                 <MiniThumb>
-                 <img alt="" style={{ height: '100%', width: '100%', marginRight: '10px' }} src={this.state.detailurl}/>
-                 <img alt="" style={{ height: '100%', width: '100%', marginRight: '10px' }} src={this.state.detailurl}/>
-                 <img alt="" style={{ height: '100%', width: '100%', marginRight: '10px' }} src={this.state.detailurl}/>
-                 <img alt="" style={{ height: '100%', width: '100%', marginRight: '10px' }} src={this.state.detailurl}/>
-                 <img alt="" style={{ height: '100%', width: '100%', marginRight: '10px' }} src={this.state.detailurl}/>
+                 <img alt="" style={{ height: '100%', width: '100%', marginRight: '30px' }} src={carAPI[+1].url}/>
+                 <img alt="" style={{ height: '100%', width: '100%', marginRight: '30px' }} src={carAPI[+2].url}/>
+                 <img alt="" style={{ height: '100%', width: '100%', marginRight: '30px' }} src={carAPI[+3].url}/>
+                 <img alt="" style={{ height: '100%', width: '100%', marginRight: '30px' }} src={carAPI[+4].url}/>
+                 <img alt="" style={{ height: '100%', width: '100%', marginRight: '30px' }} src={carAPI[+5].url}/>
                 </MiniThumb>
                 <Title>
                  {this.state.detailtitle}
@@ -46,7 +47,6 @@ componentDidMount () {
                  {this.state.detailinfo}
                 </Info>
             </BigThumbContainer>
-            }
             </React.Fragment>
         )
       }
